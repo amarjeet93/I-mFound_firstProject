@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.e.found">
+
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.e.found.Utils.MyApp"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.found"
+        tools:replace="android:fullBackupContent">
+
+        <activity
+            android:name="com.e.found.Activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.e.found.Activities.BaseActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.e.found.Activities.SignUpStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.e.found.Activities.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.e.found.Activities.ChooseGenderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.e.found.Activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.e.found.Activities.RegisterMainScreen"
+            android:screenOrientation="portrait" />
+
+
+    </application>
+
+</manifest>

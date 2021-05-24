@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "com.e.found"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    //for layout dimensions
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //for text dimensions
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    //for image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //multidex
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+
+
+    //firebase
+    implementation 'com.google.firebase:firebase-core:17.3.0'
+
+    implementation 'com.google.firebase:firebase-firestore:21.0.0'
+    //firebase
+    implementation 'com.google.firebase:firebase-messaging:20.3.0'
+
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    //-----FIREBASE DATABASE---
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+    //----FIREBASE AUTHENTICATION---
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    //-----FIREBASE STORAGE----
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+    implementation 'com.google.firebase:firebase-database-ktx'
+
+    //-----DATA IS FETCHED FROM DATABASE AND ADDED TO RECYCLER VIEW----
+    implementation 'com.firebaseui:firebase-ui-database:1.0.1'
+
+    //loader
+    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+}
+apply plugin: 'com.google.gms.google-services'
